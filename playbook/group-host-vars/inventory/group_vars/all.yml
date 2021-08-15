@@ -1,0 +1,4 @@
+ansible_connection: ssh
+ansible_user: fourth
+ansible_password: ooxx1234
+http_port: 80

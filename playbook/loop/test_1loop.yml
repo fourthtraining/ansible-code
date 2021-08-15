@@ -1,0 +1,20 @@
+---
+
+- name: test loop
+  hosts: localhost
+  gather_facts: no
+
+  vars:
+    test:
+    - test1
+    - test2
+    - test3
+    - test4
+
+  tasks:
+    - name: Test loop
+      debug:
+        msg: "{{ item }}"
+      with_items: "{{ test }}"
+
+#這個範例是一次迴圈

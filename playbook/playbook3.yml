@@ -1,0 +1,5 @@
+- hosts: test
+  name: play-test
+  tasks:
+  - name: check host commection
+    ping:

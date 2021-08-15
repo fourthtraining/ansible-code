@@ -1,0 +1,23 @@
+---
+
+- name: test when condition
+  hosts: localhost
+  gather_facts: no
+
+  vars:
+    seq:
+      - 1
+      - 2
+      - 3
+      - 4
+
+  tasks:
+    - name: test loop and when
+      debug:
+        msg: "{{ item }}"
+      with_items: "{{ seq }}"
+      when: item >3
+
+
+#條件判斷when的使用
+#官方範例文件 https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html

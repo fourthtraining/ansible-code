@@ -1,0 +1,12 @@
+---
+
+- name: Hello World
+  hosts: localhost
+
+  vars_files:
+    - "/home/fourth/ansible/ansible-code/vars_file/vars/demo.yml"
+
+  tasks:
+    - name: Hello World debug
+      debug:
+        msg: "{{greetings}}"

@@ -1,0 +1,11 @@
+- hosts: test1
+  name: play-test
+  tasks:
+  - name: check host commection
+    ping:
+
+- hosts: test2
+  name: play-test
+  tasks:
+  - name: check host commection
+    ping:

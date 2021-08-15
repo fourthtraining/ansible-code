@@ -1,0 +1,10 @@
+---
+
+- name: Hello World
+  hosts: localhost
+
+  tasks:
+    - name: Hello World debug
+      debug:
+        msg: "Hello World"  #使用debug Module， msg預設字串為Hello World，即使沒有加上這一行，也會打印出Hello World
+#這個playbook是在演示debug Module

@@ -1,0 +1,13 @@
+---
+
+- name: Hello World
+  hosts: localhost
+
+  vars_files:
+    - "vars/demo.yml"
+    - "vars/test.yml"
+
+  tasks:
+    - name: Hello World debug
+      debug:
+        msg: "{{greetings}}"
