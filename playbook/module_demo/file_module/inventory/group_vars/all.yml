@@ -1,0 +1,3 @@
+ansible_user: fourth
+ansible_password: ooxx1234
+ansible_connection: ssh
