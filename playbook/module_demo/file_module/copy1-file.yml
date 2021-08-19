@@ -9,9 +9,3 @@
       copy: 
         src: files/test.txt
         dest: /etc/test/test.txt
-
-
-
-#site.yml = playbook yml檔案
-#ansible-playbook site.yml
-#此play-book作用僅限於copy檔案到遠端，若遠端目錄不存在，此playbook無法作用

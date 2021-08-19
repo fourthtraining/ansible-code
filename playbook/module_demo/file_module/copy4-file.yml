@@ -1,0 +1,25 @@
+---
+
+- name: file module
+  hosts: all
+  gather_facts: no
+  become: yes
+
+  tasks:
+    - name: Create a directory if it does not exist
+      file:
+        path: /etc/test
+        state: directory
+    
+    - name: copy files from local to remote
+      copy: 
+        src: files/test.txt
+        dest: /home/fourth/test/test.txt
+        backup: yes
+
+
+
+#site.yml = playbook yml檔案
+#ansible-playbook site.yml
+#此play-book作用僅限於copy檔案到遠端，若遠端目錄不存在，此playbook會自動建立目錄，並將檔案複製到遠端，若是需要建議在/etc底下，需要加上root權限
+#become: yes  <=====使用root權限
